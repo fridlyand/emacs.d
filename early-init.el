@@ -2,6 +2,5 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
-(push '(fullscreen . maximized) default-frame-alist)
 (push '(font . "PragmataPro VF Mono-16") default-frame-alist)
 (setq ns-use-proxy-icon nil)
