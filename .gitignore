@@ -1,9 +1,3 @@
-# Emacs autosave, lock, and backup artifacts
 \#*\#
 .\#*
 *~
-
-# Native-comp / package state (not config)
-eln-cache/
-elpa/
-auto-save-list/
