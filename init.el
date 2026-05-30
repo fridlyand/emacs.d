@@ -2,6 +2,7 @@
 (setq initial-scratch-message nil)
 (global-font-lock-mode -1)
 (show-paren-mode -1)
+(setq blink-matching-paren nil)
 
 (set-face-attribute 'default nil :background "#FFFFEA" :foreground "#000000")
 (set-face-attribute 'mode-line nil :background "#EAFFFF" :foreground "#000000" :box nil)
