@@ -1,11 +1,12 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+
+(setq frame-inhibit-implied-resize t)
 (push '(fullscreen . maximized) default-frame-alist)
 (push '(font . "PragmataPro VF Mono-16") default-frame-alist)
-(setq frame-inhibit-implied-resize t)
-(setq ns-use-proxy-icon nil)
 
+(setq ns-use-proxy-icon nil)
 (defun my/no-fullheight-zoom (frame)
   (when (eq (frame-parameter frame 'fullscreen) 'fullheight)
     (set-frame-parameter frame 'fullscreen 'maximized)))

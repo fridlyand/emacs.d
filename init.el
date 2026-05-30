@@ -1,8 +1,8 @@
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
-
 (global-font-lock-mode -1)
 (show-paren-mode -1)
+
 (set-cursor-color "#000000")
 (set-face-attribute 'default nil :background "#FFFFEA" :foreground "#000000")
 (set-face-attribute 'mode-line nil :background "#EAFFFF" :foreground "#000000" :box nil)
