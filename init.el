@@ -1,19 +1,10 @@
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message nil)
 
-(global-font-lock-mode -1)
 (show-paren-mode -1)
 (setq blink-matching-paren nil)
 
 (setq ns-command-modifier 'meta)
 (setq ns-option-modifier 'super)
 
-(set-face-attribute 'default nil :background "#FFFFEA" :foreground "#000000")
-(set-face-attribute 'mode-line nil :background "#EAFFFF" :foreground "#000000" :box nil)
-(set-face-attribute 'mode-line-inactive nil :background "#EAFFFF" :foreground "#888888" :box nil)
-(set-face-attribute 'region nil :background "#EEEE9E")
-(set-face-attribute 'isearch nil :background "#EEEE9E" :foreground "#000000")
-(set-face-attribute 'lazy-highlight nil :background "#9EEEEE" :foreground "#000000")
-(set-face-attribute 'error nil :foreground "#880000" :weight 'bold)
-(set-face-attribute 'minibuffer-prompt nil :foreground "#000000")
-(set-face-attribute 'fringe nil :background "#FFFFEA" :foreground "#FFFFEA")
+(load-theme 'naysayer-cream t)
