@@ -11,10 +11,6 @@
 (show-paren-mode -1)
 (setq blink-matching-paren nil)
 
-(setq scroll-conservatively 101
-      scroll-preserve-screen-position t
-      scroll-error-top-bottom t)
-
 (setq ns-command-modifier 'meta)
 (setq ns-option-modifier 'super)
 
