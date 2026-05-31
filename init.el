@@ -14,7 +14,6 @@
 (setq scroll-conservatively 101
       scroll-preserve-screen-position t
       scroll-error-top-bottom t)
-(pixel-scroll-precision-mode 1)
 
 (setq ns-command-modifier 'meta)
 (setq ns-option-modifier 'super)
