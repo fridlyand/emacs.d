@@ -1,10 +1,10 @@
-;;; naysayer-cream-theme.el --- Acme cream + a quiet naysayer palette  -*- lexical-binding: t; -*-
+;;; naysayer-cream-theme.el --- Pure Acme cream: no syntax highlighting  -*- lexical-binding: t; -*-
 
-;; Near-pure Acme: comments are the only syntax color; every other token
-;; (strings, numbers, keywords, types) stays plain black.  Cream (Plan 9 Acme) bg.
+;; Pure Acme: no syntax highlighting at all.  Every code token is plain black;
+;; color lives only in the UI (mode-line, selection).  Cream (Plan 9 Acme) bg.
 
 (deftheme naysayer-cream
-  "Cream Acme canvas; comments are the only syntax highlight.")
+  "Cream Acme canvas; no syntax highlighting, color only in the UI.")
 
 (let ((bg    "#FFFFEA")   ; Acme cream
       (fg    "#000000")
@@ -12,7 +12,6 @@
       (sel   "#EEEE9E")   ; selection (Acme yellow)
       (cyan  "#9EEEEE")
       (bar   "#EAFFFF")   ; mode-line
-      (green "#2F7A2F")   ; comments — the only syntax color
       (red   "#880000"))  ; errors
   (custom-theme-set-faces
    'naysayer-cream
@@ -33,10 +32,10 @@
    `(warning ((t (:foreground ,fg :weight bold))))
    `(success ((t (:foreground ,fg))))
    `(link ((t (:foreground ,fg :underline t))))
-   ;; comments are the only highlight; every other token is Acme black
-   `(font-lock-comment-face ((t (:foreground ,green))))
-   `(font-lock-comment-delimiter-face ((t (:foreground ,green))))
-   `(font-lock-doc-face ((t (:foreground ,green))))
+   ;; no syntax highlighting: every code token is Acme black
+   `(font-lock-comment-face ((t (:foreground ,fg))))
+   `(font-lock-comment-delimiter-face ((t (:foreground ,fg))))
+   `(font-lock-doc-face ((t (:foreground ,fg))))
    `(font-lock-string-face ((t (:foreground ,fg))))
    `(font-lock-number-face ((t (:foreground ,fg))))
    `(font-lock-keyword-face ((t (:foreground ,fg))))
