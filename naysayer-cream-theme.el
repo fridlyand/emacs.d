@@ -12,9 +12,9 @@
       (sel   "#EEEE9E")   ; selection (Acme yellow)
       (cyan  "#9EEEEE")
       (bar   "#EAFFFF")   ; mode-line
-      (green "#4C7A4C")   ; comments (muted)
-      (teal  "#2F6F6F")   ; strings (muted)
-      (num   "#1F6F8F")   ; number literals (bluer cyan, distinct from strings)
+      (green "#2F7A2F")   ; comments (clearer green, pushed away from teal)
+      (teal  "#2F6F6F")   ; strings (the teal anchor)
+      (num   "#1F6FA0")   ; number literals (bluer, pushed away from teal)
       (red   "#880000"))  ; errors
   (custom-theme-set-faces
    'naysayer-cream
