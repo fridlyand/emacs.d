@@ -9,7 +9,6 @@
 (desktop-save-mode 1)
 
 (setq font-lock-maximum-decoration 1)
-(show-paren-mode -1)
 (setq blink-matching-paren nil)
 
 (setq ns-command-modifier 'meta)
