@@ -1,10 +1,10 @@
 ;;; naysayer-cream-theme.el --- Acme cream + a quiet naysayer palette  -*- lexical-binding: t; -*-
 
-;; Font-lock ON, but low-contrast: only comments, strings, and numbers carry
-;; muted color; every other token type stays plain black.  Cream (Plan 9 Acme) bg.
+;; Near-pure Acme: comments are the only syntax color; every other token
+;; (strings, numbers, keywords, types) stays plain black.  Cream (Plan 9 Acme) bg.
 
 (deftheme naysayer-cream
-  "Cream background with a quiet, low-contrast naysayer-style palette.")
+  "Cream Acme canvas; comments are the only syntax highlight.")
 
 (let ((bg    "#FFFFEA")   ; Acme cream
       (fg    "#000000")
@@ -12,9 +12,7 @@
       (sel   "#EEEE9E")   ; selection (Acme yellow)
       (cyan  "#9EEEEE")
       (bar   "#EAFFFF")   ; mode-line
-      (green "#2F7A2F")   ; comments (clearer green, pushed away from teal)
-      (teal  "#0C6E6E")   ; strings (saturated teal — reads as colored, not dark text)
-      (num   "#0A5FA8")   ; number literals (saturated blue)
+      (green "#2F7A2F")   ; comments — the only syntax color
       (red   "#880000"))  ; errors
   (custom-theme-set-faces
    'naysayer-cream
@@ -35,13 +33,12 @@
    `(warning ((t (:foreground ,fg :weight bold))))
    `(success ((t (:foreground ,fg))))
    `(link ((t (:foreground ,fg :underline t))))
-   ;; font-lock: comments, strings, and number literals carry muted color
+   ;; comments are the only highlight; every other token is Acme black
    `(font-lock-comment-face ((t (:foreground ,green))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,green))))
    `(font-lock-doc-face ((t (:foreground ,green))))
-   `(font-lock-string-face ((t (:foreground ,teal))))
-   `(font-lock-number-face ((t (:foreground ,num))))
-   ;; font-lock: everything else stays plain (suppress Emacs' colorful defaults)
+   `(font-lock-string-face ((t (:foreground ,fg))))
+   `(font-lock-number-face ((t (:foreground ,fg))))
    `(font-lock-keyword-face ((t (:foreground ,fg))))
    `(font-lock-function-name-face ((t (:foreground ,fg))))
    `(font-lock-variable-name-face ((t (:foreground ,fg))))

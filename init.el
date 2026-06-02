@@ -14,6 +14,9 @@
             (font-lock-add-keywords nil
               '(("\\_<[[:digit:]][[:alnum:]._']*\\_>" (0 'font-lock-number-face))))))
 
+(show-paren-mode -1)
+(setq blink-matching-paren nil)
+
 (setq ns-command-modifier 'meta)
 (setq ns-option-modifier 'super)
 
