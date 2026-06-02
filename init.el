@@ -15,4 +15,4 @@
 (setq ns-command-modifier 'meta
       ns-option-modifier 'super)
 
-(load-theme 'theme t)
+(load (locate-user-emacs-file "theme") nil t)
