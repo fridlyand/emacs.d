@@ -12,7 +12,7 @@
 (add-hook 'prog-mode-hook
           (lambda ()
             (font-lock-add-keywords nil
-              '(("\\_<[[:digit:]][[:alnum:]._']*\\_>" . font-lock-number-face)))))
+              '(("\\_<[[:digit:]][[:alnum:]._']*\\_>" (0 'font-lock-number-face))))))
 
 (setq ns-command-modifier 'meta)
 (setq ns-option-modifier 'super)
