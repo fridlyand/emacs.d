@@ -1,9 +1,9 @@
-;;; naysayer-cream-theme.el --- Pure Acme cream: no syntax highlighting  -*- lexical-binding: t; -*-
+;;; theme-theme.el --- Pure Acme cream: no syntax highlighting  -*- lexical-binding: t; -*-
 
 ;; Pure Acme: no syntax highlighting at all.  Every code token is plain black;
 ;; color lives only in the UI (mode-line, selection).  Cream (Plan 9 Acme) bg.
 
-(deftheme naysayer-cream
+(deftheme theme
   "Cream Acme canvas; no syntax highlighting, color only in the UI.")
 
 (let ((bg    "#FFFFEA")   ; Acme cream
@@ -14,7 +14,7 @@
       (bar   "#EAFFFF")   ; mode-line
       (red   "#880000"))  ; errors
   (custom-theme-set-faces
-   'naysayer-cream
+   'theme
    ;; base / always-on UI roots
    `(default ((t (:background ,bg :foreground ,fg))))
    `(cursor ((t (:background ,fg))))
@@ -48,5 +48,5 @@
    `(font-lock-negation-char-face ((t (:foreground ,fg))))
    `(font-lock-warning-face ((t (:foreground ,red :weight bold))))))
 
-(provide-theme 'naysayer-cream)
-;;; naysayer-cream-theme.el ends here
+(provide-theme 'theme)
+;;; theme-theme.el ends here

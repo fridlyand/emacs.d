@@ -15,4 +15,4 @@
 (setq ns-command-modifier 'meta
       ns-option-modifier 'super)
 
-(load-theme 'naysayer-cream t)
+(load-theme 'theme t)
