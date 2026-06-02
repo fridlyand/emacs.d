@@ -9,7 +9,10 @@
 (desktop-save-mode 1)
 
 (setq font-lock-maximum-decoration 1)
-(setq blink-matching-paren nil)
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (font-lock-add-keywords nil
+              '(("\\_<[[:digit:]][[:alnum:]._']*\\_>" . font-lock-number-face)))))
 
 (setq ns-command-modifier 'meta)
 (setq ns-option-modifier 'super)

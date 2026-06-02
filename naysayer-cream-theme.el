@@ -1,7 +1,7 @@
 ;;; naysayer-cream-theme.el --- Acme cream + a quiet naysayer palette  -*- lexical-binding: t; -*-
 
-;; Font-lock ON, but low-contrast: only comments and strings carry muted color;
-;; every other token type stays plain black.  Cream (Plan 9 Acme) background.
+;; Font-lock ON, but low-contrast: only comments, strings, and numbers carry
+;; muted color; every other token type stays plain black.  Cream (Plan 9 Acme) bg.
 
 (deftheme naysayer-cream
   "Cream background with a quiet, low-contrast naysayer-style palette.")
@@ -14,6 +14,7 @@
       (bar   "#EAFFFF")   ; mode-line
       (green "#4C7A4C")   ; comments (muted)
       (teal  "#2F6F6F")   ; strings (muted)
+      (num   "#1F6F8F")   ; number literals (bluer cyan, distinct from strings)
       (red   "#880000"))  ; errors
   (custom-theme-set-faces
    'naysayer-cream
@@ -34,11 +35,12 @@
    `(warning ((t (:foreground ,fg :weight bold))))
    `(success ((t (:foreground ,fg))))
    `(link ((t (:foreground ,fg :underline t))))
-   ;; font-lock: only comments + strings carry muted color
+   ;; font-lock: comments, strings, and number literals carry muted color
    `(font-lock-comment-face ((t (:foreground ,green))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,green))))
    `(font-lock-doc-face ((t (:foreground ,green))))
    `(font-lock-string-face ((t (:foreground ,teal))))
+   `(font-lock-number-face ((t (:foreground ,num))))
    ;; font-lock: everything else stays plain (suppress Emacs' colorful defaults)
    `(font-lock-keyword-face ((t (:foreground ,fg))))
    `(font-lock-function-name-face ((t (:foreground ,fg))))
