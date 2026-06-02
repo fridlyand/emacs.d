@@ -1,23 +1,24 @@
-;;; naysayer-cream-theme.el --- Acme cream + a quiet naysayer palette  -*- lexical-binding: t; -*-
+;;; naysayer-dark-theme.el --- Dark naysayer sibling: literals that blaze  -*- lexical-binding: t; -*-
 
-;; Font-lock ON, but low-contrast: only comments, strings, and numbers carry
-;; muted color; every other token type stays plain black.  Cream (Plan 9 Acme) bg.
+;; Same discipline as naysayer-cream: only comments, strings, and numbers carry
+;; color; every other token stays plain (warm tan).  A dark ground lets the
+;; accents glow the way a light theme structurally can't.
 
-(deftheme naysayer-cream
-  "Cream background with a quiet, low-contrast naysayer-style palette.")
+(deftheme naysayer-dark
+  "Dark ground, warm-tan body, three bright literal accents.")
 
-(let ((bg    "#FFFFEA")   ; Acme cream
-      (fg    "#000000")
-      (dim   "#8A8A82")   ; secondary / shadow
-      (sel   "#EEEE9E")   ; selection (Acme yellow)
-      (cyan  "#9EEEEE")
-      (bar   "#EAFFFF")   ; mode-line
-      (green "#2F7A2F")   ; comments (clearer green, pushed away from teal)
-      (teal  "#0C6E6E")   ; strings (saturated teal — reads as colored, not dark text)
-      (num   "#0A5FA8")   ; number literals (saturated blue)
-      (red   "#880000"))  ; errors
+(let ((bg    "#0E1A1A")   ; dark teal-charcoal
+      (fg    "#D8CCA8")   ; warm tan body (all code is this)
+      (dim   "#6E7A72")   ; secondary / shadow
+      (sel   "#27403E")   ; selection
+      (cyan  "#2A4A4C")   ; dim highlight bg
+      (bar   "#16292B")   ; mode-line
+      (green "#6FAE4F")   ; comments (bright green)
+      (teal  "#3FBDA8")   ; strings (bright teal)
+      (num   "#5FB8E6")   ; number literals (bright sky-blue)
+      (red   "#E5675F"))  ; errors
   (custom-theme-set-faces
-   'naysayer-cream
+   'naysayer-dark
    ;; base / always-on UI roots
    `(default ((t (:background ,bg :foreground ,fg))))
    `(cursor ((t (:background ,fg))))
@@ -28,14 +29,14 @@
    `(mode-line ((t (:background ,bar :foreground ,fg :box nil))))
    `(mode-line-inactive ((t (:background ,bar :foreground ,dim :box nil))))
    `(minibuffer-prompt ((t (:foreground ,fg))))
-   `(isearch ((t (:background ,sel :foreground ,fg))))
+   `(isearch ((t (:background ,teal :foreground ,bg))))
    `(lazy-highlight ((t (:background ,cyan :foreground ,fg))))
    `(shadow ((t (:foreground ,dim))))
    `(error ((t (:foreground ,red :weight bold))))
    `(warning ((t (:foreground ,fg :weight bold))))
    `(success ((t (:foreground ,fg))))
    `(link ((t (:foreground ,fg :underline t))))
-   ;; font-lock: comments, strings, and number literals carry muted color
+   ;; font-lock: comments, strings, and number literals carry color
    `(font-lock-comment-face ((t (:foreground ,green))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,green))))
    `(font-lock-doc-face ((t (:foreground ,green))))
@@ -52,5 +53,5 @@
    `(font-lock-negation-char-face ((t (:foreground ,fg))))
    `(font-lock-warning-face ((t (:foreground ,red :weight bold))))))
 
-(provide-theme 'naysayer-cream)
-;;; naysayer-cream-theme.el ends here
+(provide-theme 'naysayer-dark)
+;;; naysayer-dark-theme.el ends here
