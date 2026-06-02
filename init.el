@@ -18,3 +18,13 @@
 (setq ns-option-modifier 'super)
 
 (load-theme 'naysayer-cream t)
+
+(defvar naysayer-theme-ring '(naysayer-cream naysayer-dark naysayer-plain))
+(defun naysayer-cycle-theme ()
+  (interactive)
+  (let* ((cur (seq-find (lambda (x) (memq x custom-enabled-themes)) naysayer-theme-ring))
+         (next (or (cadr (memq cur naysayer-theme-ring)) (car naysayer-theme-ring))))
+    (mapc #'disable-theme custom-enabled-themes)
+    (load-theme next t)
+    (message "%s" next)))
+(global-set-key (kbd "C-c t") #'naysayer-cycle-theme)
