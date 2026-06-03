@@ -9,6 +9,7 @@
 (desktop-save-mode 1)
 
 (setq font-lock-maximum-decoration 1)
+(setq c-default-style "linux")
 (show-paren-mode -1)
 (setq blink-matching-paren nil)
 
