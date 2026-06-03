@@ -32,6 +32,7 @@
    `(warning ((t (:foreground ,fg :weight bold))))
    `(success ((t (:foreground ,fg))))
    `(link ((t (:foreground ,fg :underline t))))
+   `(vertical-border ((t (:foreground ,dim))))
    ;; no syntax highlighting: every code token is Acme black
    `(font-lock-comment-face ((t (:foreground ,fg))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,fg))))
