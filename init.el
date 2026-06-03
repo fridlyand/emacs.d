@@ -6,7 +6,6 @@
       create-lockfiles nil
       custom-file null-device)
 (save-place-mode 1)
-(desktop-save-mode 1)
 
 (setq font-lock-maximum-decoration 1)
 (setq c-default-style "linux")
