@@ -4,7 +4,8 @@
 (setq make-backup-files nil
       auto-save-default nil
       create-lockfiles nil
-      custom-file null-device)
+      custom-file null-device
+      auto-save-visited-interval 1)
 (auto-save-visited-mode 1)
 (save-place-mode 1)
 
