@@ -1,10 +1,11 @@
 (setq inhibit-startup-screen t
       initial-scratch-message nil)
 
-(setq backup-directory-alist `(("." . ,(locate-user-emacs-file "backups")))
-      auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
+(setq make-backup-files nil
+      auto-save-default nil
       create-lockfiles nil
       custom-file null-device)
+(auto-save-visited-mode 1)
 (save-place-mode 1)
 
 (setq font-lock-maximum-decoration 1)
