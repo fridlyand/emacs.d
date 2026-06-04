@@ -4,10 +4,7 @@
 (setq make-backup-files nil
       auto-save-default nil
       create-lockfiles nil
-      custom-file null-device
-      auto-save-visited-interval 5
-      save-silently t)
-(auto-save-visited-mode 1)
+      custom-file null-device)
 (save-place-mode 1)
 
 (setq font-lock-maximum-decoration 1)
