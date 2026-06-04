@@ -5,7 +5,7 @@
       auto-save-default nil
       create-lockfiles nil
       custom-file null-device
-      auto-save-visited-interval 1
+      auto-save-visited-interval 5
       save-silently t)
 (auto-save-visited-mode 1)
 (save-place-mode 1)
