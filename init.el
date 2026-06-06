@@ -7,6 +7,9 @@
       custom-file null-device)
 (save-place-mode 1)
 
+;; Start in $HOME regardless of where Emacs was launched (e.g. taskbar shortcut)
+(add-hook 'emacs-startup-hook (lambda () (cd "~")))
+
 (setq font-lock-maximum-decoration 1)
 (setq c-default-style "linux")
 (show-paren-mode -1)
