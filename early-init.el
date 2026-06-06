@@ -2,8 +2,11 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (set-fringe-mode '(4 . 4))
-
-(push '(font . "PragmataPro VF Mono-16") default-frame-alist)
+(setq frame-resize-pixelwise t)
+(push '(font . "PragmataPro VF Mono") default-frame-alist) ; size: see init.el (DPI-scaled)
+(push '(fullscreen . maximized) default-frame-alist)
+(when (eq system-type 'windows-nt)
+  (push '(visibility . nil) default-frame-alist))
 (setq ns-use-proxy-icon nil)
 (push '(ns-transparent-titlebar . t) default-frame-alist)
 (push '(ns-appearance . light) default-frame-alist)

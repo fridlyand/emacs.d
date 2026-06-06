@@ -15,4 +15,15 @@
 (setq ns-command-modifier 'meta
       ns-option-modifier 'super)
 
+(set-frame-font (font-spec :family "PragmataPro VF Mono"
+                           :size (round (* 3.3 (/ (display-pixel-height) (float (display-mm-height))))))
+                t t)
+
+(when (eq system-type 'windows-nt)
+  (add-hook 'window-setup-hook
+            (lambda ()
+              (set-frame-parameter nil 'fullscreen nil)
+              (set-frame-parameter nil 'fullscreen 'maximized)
+              (make-frame-visible))))
+
 (load-theme 'my t)
