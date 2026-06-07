@@ -17,7 +17,7 @@
 (setq ns-command-modifier 'meta
       ns-option-modifier 'super)
 
-(set-frame-font (if (eq system-type 'windows-nt)
+(set-frame-font (if (< (display-mm-width) 400)
                     "PragmataPro VF Mono-12"
                   "PragmataPro VF Mono-16")
                 t t)

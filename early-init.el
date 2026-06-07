@@ -3,7 +3,7 @@
 (scroll-bar-mode -1)
 (set-fringe-mode '(4 . 4))
 (setq frame-resize-pixelwise t)
-(push (cons 'font (if (eq system-type 'windows-nt)
+(push (cons 'font (if (< (or (ignore-errors (display-mm-width)) 999) 400)
                       "PragmataPro VF Mono-12"
                     "PragmataPro VF Mono-16"))
       default-frame-alist)
