@@ -1,21 +1,17 @@
-;;; my-theme.el --- Pure Acme cream: no syntax highlighting  -*- lexical-binding: t; -*-
-
-;; Every code token is plain black; color lives only in the UI (mode-line,
-;; selection).  Cream (Plan 9 Acme) background.
+;;; -*- lexical-binding: t; -*-
 
 (deftheme my
   "Cream Acme canvas; no syntax highlighting, color only in the UI.")
 
-(let ((bg    "#FFFFEA")   ; Acme cream
+(let ((bg    "#FFFFEA")
       (fg    "#000000")
-      (dim   "#8A8A82")   ; secondary / shadow
-      (sel   "#EEEE9E")   ; selection (Acme yellow)
+      (dim   "#8A8A82")
+      (sel   "#EEEE9E")
       (cyan  "#9EEEEE")
-      (bar   "#EAFFFF")   ; mode-line
-      (red   "#880000"))  ; errors
+      (bar   "#EAFFFF")
+      (red   "#880000"))
   (custom-theme-set-faces
    'my
-   ;; base / always-on UI roots
    `(default ((t (:background ,bg :foreground ,fg))))
    `(cursor ((t (:background ,fg))))
    `(region ((t (:background ,sel :extend t))))
@@ -33,7 +29,6 @@
    `(success ((t (:foreground ,fg))))
    `(link ((t (:foreground ,fg :underline t))))
    `(vertical-border ((t (:foreground ,dim))))
-   ;; no syntax highlighting: every code token is Acme black
    `(font-lock-comment-face ((t (:foreground ,fg))))
    `(font-lock-comment-delimiter-face ((t (:foreground ,fg))))
    `(font-lock-doc-face ((t (:foreground ,fg))))
@@ -50,4 +45,3 @@
    `(font-lock-warning-face ((t (:foreground ,red :weight bold))))))
 
 (provide-theme 'my)
-;;; my-theme.el ends here

@@ -3,7 +3,7 @@
 (scroll-bar-mode -1)
 (set-fringe-mode '(4 . 4))
 (setq frame-resize-pixelwise t)
-(push '(font . "PragmataPro VF Mono") default-frame-alist) ; size: see init.el (DPI-scaled)
+(push '(font . "PragmataPro VF Mono-16") default-frame-alist)
 (push '(fullscreen . maximized) default-frame-alist)
 (when (eq system-type 'windows-nt)
   (push '(visibility . nil) default-frame-alist))
