@@ -17,7 +17,10 @@
 (setq ns-command-modifier 'meta
       ns-option-modifier 'super)
 
-(set-frame-font "PragmataPro VF Mono-16" t t)
+(set-frame-font (if (eq system-type 'windows-nt)
+                    "PragmataPro VF Mono-12"
+                  "PragmataPro VF Mono-16")
+                t t)
 
 (when (eq system-type 'windows-nt)
   (add-hook 'window-setup-hook
