@@ -5,6 +5,7 @@
 
 (setq frame-resize-pixelwise t)
 (setq ns-use-proxy-icon nil)
+(push '(fullscreen . maximized) default-frame-alist)
 (push '(font . "PragmataPro VF Mono-11.5") default-frame-alist)
 (push '(ns-transparent-titlebar . t) default-frame-alist)
 
