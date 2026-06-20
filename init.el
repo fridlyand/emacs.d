@@ -3,6 +3,7 @@
       initial-buffer-choice "~/Dropbox/todo.txt")
 
 (setq make-backup-files nil
+      auto-save-default nil
       create-lockfiles nil
       custom-file null-device)
 (setq default-directory "~/")
