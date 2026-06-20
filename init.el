@@ -1,12 +1,13 @@
 (setq inhibit-startup-screen t
-      initial-scratch-message nil)
+      initial-scratch-message nil
+      initial-buffer-choice "~/Dropbox/todo.txt")
 
 (setq make-backup-files nil
-      auto-save-default nil
       create-lockfiles nil
       custom-file null-device)
 (setq default-directory "~/")
 (save-place-mode 1)
+(auto-save-visited-mode 1)
 
 (setq font-lock-maximum-decoration 1)
 (setq c-default-style "linux")
