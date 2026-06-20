@@ -11,5 +11,6 @@
 
 (save-place-mode 1)
 (auto-save-visited-mode 1)
+(global-auto-revert-mode 1)
 
 (setq c-default-style "linux")
