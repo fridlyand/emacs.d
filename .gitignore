@@ -2,4 +2,4 @@
 !.gitignore
 !early-init.el
 !init.el
-!my-theme.el
+!ui.el

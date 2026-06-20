@@ -1,13 +1,15 @@
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(set-fringe-mode '(4 . 4))
+(load (expand-file-name "ui.el" user-emacs-directory) t t)
 
-(setq frame-resize-pixelwise t)
-(setq ns-use-proxy-icon nil)
-(push '(fullscreen . maximized) default-frame-alist)
-(push '(font . "PragmataPro VF Mono-11.5") default-frame-alist)
-(push '(ns-transparent-titlebar . t) default-frame-alist)
+(load (expand-file-name "local.el" user-emacs-directory) t t)
 
-(let ((local (expand-file-name "local.el" user-emacs-directory)))
-  (when (file-exists-p local) (load local nil t)))
+(setq ns-command-modifier 'meta
+      ns-option-modifier 'super)
+
+(setq make-backup-files nil
+      create-lockfiles nil
+      initial-buffer-choice "~/Dropbox/todo.txt")
+
+(save-place-mode 1)
+(auto-save-visited-mode 1)
+
+(setq c-default-style "linux")

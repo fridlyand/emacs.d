@@ -1,7 +1,16 @@
-;;; -*- lexical-binding: t; -*-
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(set-fringe-mode '(4 . 4))
+(setq inhibit-startup-screen t)
+(setq frame-resize-pixelwise t)
+(push '(fullscreen . maximized) default-frame-alist)
+(push '(ns-transparent-titlebar . t) default-frame-alist)
+(setq ns-use-proxy-icon nil)
 
-(deftheme my
-  "Cream Acme canvas; no syntax highlighting, color only in the UI.")
+(setq font-lock-maximum-decoration 1)
+(setq blink-matching-paren nil)
+(show-paren-mode -1)
 
 (let ((bg    "#FFFFEA")
       (fg    "#000000")
@@ -10,8 +19,7 @@
       (cyan  "#9EEEEE")
       (bar   "#EAFFFF")
       (red   "#880000"))
-  (custom-theme-set-faces
-   'my
+  (custom-set-faces
    `(default ((t (:background ,bg :foreground ,fg))))
    `(cursor ((t (:background ,fg))))
    `(region ((t (:background ,sel :extend t))))
@@ -43,5 +51,3 @@
    `(font-lock-preprocessor-face ((t (:foreground ,fg))))
    `(font-lock-negation-char-face ((t (:foreground ,fg))))
    `(font-lock-warning-face ((t (:foreground ,red :weight bold))))))
-
-(provide-theme 'my)
